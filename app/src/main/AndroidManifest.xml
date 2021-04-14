@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.smartbackrest">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:ignore="GoogleAppIndexingWarning">
+        <activity android:name=".LoginActivity"></activity>
+        <activity android:name=".screens.fowlerconfirmation.fowlerConfirmationActivity" />
+        <activity android:name=".screens.help.HelpActivity" />
+        <activity
+            android:name=".screens.success.SuccessActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.timerset.TimerSetActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".TimerActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.mealselection.MealActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.psychologicalprofile.PhysiologicalProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.psychologicalprofile.PsychologicalProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.medication.MedicationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.medicalprofile.MedicalProfileActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.bluetoothdeviceselection.BLEDeviceSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.profilecreation.ProfileCreationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.featureselection.FeatureSelectionActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.diseasconfirmation.DiseasConfirmationActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.mealcontent.MealContentActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".screens.MainActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
+
+</manifest>
