@@ -28,7 +28,7 @@
             android:layout_marginTop="20dp"
             android:fontFamily="@font/roboto"
             android:text="@string/smart_bedrest"
-            android:textColor="@color/splashFontColor" />
+            android:textColor="@color/app_blue_color" />
     </LinearLayout>
 
 </RelativeLayout>

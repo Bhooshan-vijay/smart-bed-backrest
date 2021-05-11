@@ -32,7 +32,7 @@ public class LoginActivity extends AppCompatActivity {
     private String mVerificationId;
     private PhoneAuthProvider.ForceResendingToken mResendToken;
     private FirebaseAuth mAuth;
-    private TextInputEditText numberEditText;
+    private EditText numberEditText;
     private EditText otpEditText;
     private FirebaseUser user;
 
