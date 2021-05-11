@@ -1,29 +1,34 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
     tools:context=".screens.MainActivity">
 
-    <ImageView
-        android:id="@+id/img_splash"
-        android:layout_width="wrap_content"
+    <LinearLayout
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:src="@drawable/ic_splashimage"
-        android:padding="20dp"
-        android:layout_centerInParent="true"/>
-
-    <androidx.appcompat.widget.AppCompatTextView
-        android:layout_below="@+id/img_splash"
-        style="@style/TextAppearance.AppCompat.Display1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:textColor="@color/colorPrimary"
         android:layout_centerInParent="true"
-        android:text="Smart Bed Backrest" />
+        android:gravity="center"
+        android:orientation="vertical">
 
+        <ImageView
+            android:id="@+id/img_splash"
+            android:layout_width="@dimen/splashImageDimen"
+            android:layout_height="@dimen/splashImageDimen"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_splashimage"/>
+
+        <androidx.appcompat.widget.AppCompatTextView
+            android:id="@+id/font"
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:fontFamily="@font/roboto"
+            android:text="@string/smart_bedrest"
+            android:textColor="@color/splashFontColor" />
+    </LinearLayout>
 
 </RelativeLayout>
