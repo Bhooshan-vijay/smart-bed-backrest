@@ -2,24 +2,24 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orientation="horizontal"
-    android:textSize="20dp">
+    android:orientation="horizontal">
 
     <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="&#x2022;"
+        android:padding="@dimen/activityPadding"
+        android:fontFamily="@font/roboto"
         android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:textSize="20sp" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txtHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical"
-        android:padding="10dp"
+        android:padding="@dimen/activityPadding"
         android:textColor="@android:color/white"
-        android:textSize="20dp" />
+        android:fontFamily="@font/roboto"
+        android:textSize="20sp" />
 
 </LinearLayout>
