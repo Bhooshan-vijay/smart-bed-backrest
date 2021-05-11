@@ -41,11 +41,11 @@
             android:textColor="@color/app_blue_color" />
 
         <ImageView
-            android:layout_width="150dp"
-            android:layout_height="150dp"
+            android:layout_width="100dp"
+            android:layout_height="100dp"
             android:layout_margin="@dimen/activityPadding"
             android:background="@drawable/rounded_rectangle_blue"
-            android:padding="@dimen/activityPadding"
+            android:padding="20dp"
             android:src="@drawable/ic_outline_person_24">
 
         </ImageView>

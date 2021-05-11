@@ -5,90 +5,254 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
+    android:gravity="center_horizontal"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".screens.featureselection.FeatureSelectionActivity">
 
-
-    <RelativeLayout
-        android:id="@+id/layoutHelp"
-        android:layout_width="wrap_content"
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="end"
-        android:background="@drawable/rounded_rectangle"
-        android:padding="10dp">
+        android:background="@color/app_blue_color"
+        android:gravity="center">
 
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgHelp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_help_outline_black_24dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/roboto_medium"
+            android:text="Home"
+            android:textSize="20sp" />
 
-    </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/layoutHelp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="end"
+            android:background="@drawable/rounded_rectangle"
+            android:padding="10dp">
 
-    <LinearLayout
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHelp"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/ic_help_outline_black_24dp" />
+
+        </RelativeLayout>
+
+    </androidx.appcompat.widget.Toolbar>
+
+    <ImageView
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_margin="@dimen/activityPadding"
+        android:background="@drawable/rounded_rectangle_blue"
+        android:padding="20dp"
+        android:src="@drawable/ic_outline_person_24" />
+
+    <androidx.appcompat.widget.AppCompatTextView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:background="#eeeeee"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
         android:gravity="center"
-        android:onClick="goToDeviceSelection"
-        android:orientation="vertical">
+        android:text="Anonymous"
+        android:textColor="@color/app_blue_color"
+        android:textSize="20dp" />
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtHeadline"
-            style="@style/TextAppearance.AppCompat.Display1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Manual Mode"
-            android:textColor="#000000"
-            android:textSize="30dp" />
-
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:alpha="0.6"
-            android:gravity="center"
-            android:text="Set decline time manually"
-            android:textColor="#020202"
-            android:textSize="20dp" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:id="@+id/linearAutoMode"
+    <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="0dp"
-        android:layout_margin="10dp"
-        android:layout_weight="1"
-        android:background="#eeeeee"
-        android:gravity="center"
-        android:onClick="goToProfileCreation"
-        android:orientation="vertical">
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/TextAppearance.AppCompat.Display1"
+        <LinearLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:gravity="center"
-            android:text="Automatic Mode"
-            android:textColor="#000000"
-            android:textSize="30dp" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-        <androidx.appcompat.widget.AppCompatTextView
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_timer_mode_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goToDeviceSelection"
+                android:layout_marginLeft="@dimen/activityPadding"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="TIMER MODE"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Enter meal details"
+                    android:textColor="@color/app_gray"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_margin="10dp"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginTop="10dp"
-            android:alpha="0.6"
-            android:gravity="center"
-            android:text="Calculate decline time with details"
-            android:textColor=" #020202"
-            android:textSize="20dp" />
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
 
-    </LinearLayout>
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_meal_mode_quick_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goToProfileCreation"
+                android:layout_marginLeft="@dimen/activityPadding"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MEAL MODE : QUICK"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Enter meal details"
+                    android:textColor="@color/app_gray"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_meal_mode_detailed_image" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:onClick="goToProfileCreation"
+                android:layout_marginLeft="@dimen/activityPadding"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    style="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MEAL MODE : DETAILED"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Enter meal details"
+                    android:textColor="@color/app_gray"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:cardBackgroundColor="@color/colorWhite"
+        app:cardCornerRadius="25dp"
+        app:cardElevation="5dp"
+        app:cardUseCompatPadding="true">
+
+        <LinearLayout
+            android:layout_margin="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="60dp"
+                android:layout_height="60dp"
+                android:src="@drawable/ic_meal_mode_expert_icon" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/activityPadding"
+                android:orientation="vertical">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtHeadline"
+                    style="@style/TextAppearance.AppCompat.Display1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="MEAL MODE : EXPERT"
+                    android:fontFamily="@font/roboto_medium"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25dp" />
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="5dp"
+                    android:fontFamily="@font/roboto"
+                    android:text="Enter meal details"
+                    android:textColor="@color/app_gray"
+                    android:textSize="20dp" />
+            </LinearLayout>
+        </LinearLayout>
+    </androidx.cardview.widget.CardView>
+
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnDemoMode"

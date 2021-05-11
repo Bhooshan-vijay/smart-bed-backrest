@@ -8,4 +8,5 @@
     <color name="app_blue_color">#195AA4</color>
     <color name="caution_text">#0A00B6</color>
     <color name="coutious_red">#BC0606</color>
+    <color name="app_gray">#8D8E8F</color>
 </resources>
