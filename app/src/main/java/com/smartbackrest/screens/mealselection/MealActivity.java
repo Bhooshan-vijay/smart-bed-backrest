@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.google.android.material.chip.ChipGroup;
@@ -28,6 +29,10 @@ public class MealActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_meal);
+
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Meal Type");
 
         findViewById(R.id.layoutHelp).setOnClickListener(new View.OnClickListener() {
             @Override
