@@ -3,8 +3,9 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:background="#ffffff"
     android:layout_height="match_parent"
+    android:background="#ffffff"
+    android:padding="@dimen/activityPadding"
     tools:context=".screens.bluetoothdeviceselection.BLEDeviceSelectionActivity">
 
     <androidx.appcompat.widget.AppCompatTextView
@@ -12,9 +13,10 @@
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:fontFamily="@font/roboto"
         android:padding="10dp"
-        android:textColor="#000000"
-        android:text="Select your device" />
+        android:text="@string/selectbedrest"
+        android:textColor="@color/app_blue_color" />
 
     <ProgressBar
         android:id="@+id/progressBar"
@@ -22,9 +24,29 @@
         android:layout_height="wrap_content"
         android:layout_centerInParent="true" />
 
-    <androidx.recyclerview.widget.RecyclerView
-        android:id="@+id/bleDeviceRecycler"
+    <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:layout_below="@id/txtHeadline" />
+        android:layout_marginTop="20dp"
+        android:background="@drawable/rectanglebox3"
+        android:layout_below="@id/txtHeadline"
+        android:orientation="vertical">
+
+        <androidx.appcompat.widget.AppCompatTextView
+            style="@style/TextAppearance.AppCompat.Headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:padding="10dp"
+            android:text="Devices :"
+            android:textColor="@color/app_blue_color" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/bleDeviceRecycler"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_below="@id/txtHeadline"
+            android:layout_margin="@dimen/activityPadding" />
+    </LinearLayout>
 </RelativeLayout>
