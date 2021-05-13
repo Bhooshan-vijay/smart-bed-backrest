@@ -6,48 +6,22 @@
     android:layout_height="match_parent"
     android:background="#ffffff"
     android:orientation="vertical"
-    android:padding="10dp"
     tools:context=".screens.mealcontent.MealContentActivity">
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:layout_margin="10dp"
-        android:text="Meal Contents"
-        android:textColor="@color/colorBlack"
-        android:textSize="25dp"
-        android:textStyle="bold" />
-
-    <RelativeLayout
-        android:id="@+id/layoutHelp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
-        android:background="@drawable/rounded_rectangle"
-        android:orientation="horizontal"
-        android:padding="10dp">
-
-        <androidx.appcompat.widget.AppCompatImageView
-            android:id="@+id/imgHelp"
-            android:layout_width="30dp"
-            android:layout_height="30dp"
-            android:background="@drawable/ic_help_outline_black_24dp" />
-
-    </RelativeLayout>
-
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
 
     <androidx.appcompat.widget.AppCompatTextView
         android:id="@+id/txtHeadline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/layoutHelp"
+        android:layout_below="@+id/toolbar"
+        android:fontFamily="@font/roboto"
         android:padding="10dp"
-        android:text="Meal Contents (optional - tap skip)"
-        android:textColor="#000000"
-        android:textSize="25dp" />
+        android:text="Choose the content of the meal:"
+        android:textColor="@color/app_blue_color"
+        android:textSize="18dp" />
 
 
     <ScrollView
@@ -64,266 +38,300 @@
             android:orientation="vertical"
             android:padding="10dp">
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Soup / Juice"
-                android:textColor="#000000"
-                android:textSize="20dp" />
-
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
 
-                <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/cGroupSoup"
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Soup /Juice"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="18dp" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/mealTypeGroup"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
                     app:singleSelection="true">
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipSoupS"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="small" />
+                        android:layout_height="55dp"
+                        android:text="Small" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipSoupM"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="medium" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Medium" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipSoupL"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="large" />
+                        android:layout_height="55dp"
+                        android:text="Large" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipSoupN"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="not sure" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Not sure" />
                 </com.google.android.material.chip.ChipGroup>
-
-
             </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Rice / Wheat / Grain based"
-                android:textColor="#000000"
-                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Rice / Wheat / Grain Based food"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="18dp" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/cGroupRice"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
                     app:singleSelection="true">
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipRiceS"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="small" />
+                        android:layout_height="55dp"
+                        android:text="Small" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipRiceM"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="medium" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Medium" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipRiceL"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="large" />
+                        android:layout_height="55dp"
+                        android:text="Large" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipRiceN"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="not sure" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Not sure" />
                 </com.google.android.material.chip.ChipGroup>
-
-
             </LinearLayout>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vegetable / Fruits"
-                android:textColor="#000000"
-                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Vegetable / Fruits"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="18dp" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/cGroupFruit"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
                     app:singleSelection="true">
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFruitS"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="small" />
+                        android:layout_height="55dp"
+                        android:text="Small" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFruitM"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="medium" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Medium" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFruitL"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="large" />
+                        android:layout_height="55dp"
+                        android:text="Large" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFruitN"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="not sure" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Not sure" />
                 </com.google.android.material.chip.ChipGroup>
-
-
             </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Protein / Meat / Fat"
-                android:textColor="#000000"
-                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:padding="10dp">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Protein / Meat / Fat"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="18dp" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/cGroupProtein"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
                     app:singleSelection="true">
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipProteinS"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="small" />
+                        android:layout_height="55dp"
+                        android:text="Small" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipProteinM"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="medium" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Medium" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipProteinL"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="large" />
+                        android:layout_height="55dp"
+                        android:text="Large" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipProteinN"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:text="not sure" />
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
+                        android:text="Not sure" />
                 </com.google.android.material.chip.ChipGroup>
-
-
             </LinearLayout>
-
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Fried food"
-                android:textColor="#000000"
-                android:textSize="20dp" />
 
             <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Soup /Juice"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="18dp" />
 
                 <com.google.android.material.chip.ChipGroup
                     android:id="@+id/cGroupFried"
+                    style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
                     app:singleSelection="true">
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFriedY"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="10dp"
+                        android:layout_height="55dp"
                         android:text="Yes" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFriedN"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="@dimen/activityPadding"
                         android:text="No" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFriedNS"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="55dp"
                         android:text="Not sure" />
                 </com.google.android.material.chip.ChipGroup>
-
-
             </LinearLayout>
-
         </LinearLayout>
-
     </ScrollView>
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnOk"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_above="@id/btnSkip"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/activityPadding"
         android:onClick="goToTimerActivity"
         android:text="Continue"
         android:textColor="@android:color/white"
@@ -332,9 +340,10 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btnSkip"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:backgroundTint="#555"
         android:onClick="skipToTimerActivity"
         android:text="Skip"
