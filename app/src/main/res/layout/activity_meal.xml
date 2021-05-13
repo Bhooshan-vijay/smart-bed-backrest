@@ -94,81 +94,30 @@
                     android:id="@+id/chipSolid"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_gravity="start"
-                    android:background="@color/colorWhite"
-                    android:elevation="15dp"
-                    android:fontFamily="@font/roboto"
                     android:text="Solid / Mostly Solid"
-                    android:textColor="@color/app_blue_color"
-                    android:textSize="25sp"
-                    app:checkedIcon="@drawable/rounded_rectangle_blue_solid"
-                    app:chipBackgroundColor="@color/colorWhite"
-                    app:chipCornerRadius="10dp"
-                    app:chipIcon="@drawable/rounded_rectangle_blue_2"
-                    app:chipIconSize="20dp"
-                    app:elevation="15dp"
-                    app:iconEndPadding="@dimen/activityPadding"
-                    app:iconStartPadding="@dimen/activityPadding" />
+                    style="@style/ChipsTheme" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipLiquid"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
                     android:layout_gravity="start"
-                    android:background="@color/colorWhite"
-                    android:elevation="15dp"
-                    android:fontFamily="@font/roboto"
                     android:text="Liquid /Mostly Liquid"
-                    android:textColor="@color/app_blue_color"
-                    android:textSize="25sp"
-                    app:checkedIcon="@drawable/rounded_rectangle_blue_solid"
-                    app:chipBackgroundColor="@color/colorWhite"
-                    app:chipCornerRadius="10dp"
-                    app:chipIcon="@drawable/rounded_rectangle_blue_2"
-                    app:chipIconSize="20dp"
-                    app:elevation="15dp"
-                    app:iconEndPadding="@dimen/activityPadding"
-                    app:iconStartPadding="@dimen/activityPadding" />
+                    style="@style/ChipsTheme" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipSemiSolid"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_gravity="start"
-                    android:background="@color/colorWhite"
-                    android:elevation="15dp"
-                    android:fontFamily="@font/roboto"
                     android:text="Semi Solid"
-                    android:textColor="@color/app_blue_color"
-                    android:textSize="25sp"
-                    app:checkedIcon="@drawable/rounded_rectangle_blue_solid"
-                    app:chipBackgroundColor="@color/colorWhite"
-                    app:chipCornerRadius="10dp"
-                    app:chipIcon="@drawable/rounded_rectangle_blue_2"
-                    app:chipIconSize="20dp"
-                    app:elevation="15dp"
-                    app:iconEndPadding="@dimen/activityPadding"
-                    app:iconStartPadding="@dimen/activityPadding" />
+                    style="@style/ChipsTheme" />
 
                 <com.google.android.material.chip.Chip
                     android:id="@+id/chipNotSure"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:layout_gravity="start"
-                    android:background="@color/colorWhite"
-                    android:elevation="15dp"
-                    android:fontFamily="@font/roboto"
-                    android:text="Not Sure"
-                    android:textColor="@color/app_blue_color"
-                    android:textSize="25sp"
-                    app:checkedIcon="@drawable/rounded_rectangle_blue_solid"
-                    app:chipBackgroundColor="@color/colorWhite"
-                    app:chipCornerRadius="10dp"
-                    app:chipIcon="@drawable/rounded_rectangle_blue_2"
-                    app:chipIconSize="20dp"
-                    app:elevation="15dp"
-                    app:iconEndPadding="@dimen/activityPadding"
-                    app:iconStartPadding="@dimen/activityPadding" />
+                    android:text="Not sure"
+                    style="@style/ChipsTheme" />
 
             </com.google.android.material.chip.ChipGroup>
 
@@ -235,7 +184,7 @@
             android:layout_height="60dp"
             android:layout_margin="3dp"
             android:layout_weight="1"
-            android:text="Confirm"
+            android:text="Next"
             android:textColor="@android:color/white"
             app:cornerRadius="20dp" />
 
