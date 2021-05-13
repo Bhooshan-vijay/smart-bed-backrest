@@ -6,23 +6,9 @@
     android:layout_height="match_parent"
     tools:context=".screens.fowlerconfirmation.fowlerConfirmationActivity">
 
-    <androidx.appcompat.widget.Toolbar
+    <include
         android:id="@+id/toolbar"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:background="@color/app_blue_color"
-        android:gravity="center">
-
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:fontFamily="@font/roboto_medium"
-            android:text="Check Up"
-            android:textSize="20sp" />
-    </androidx.appcompat.widget.Toolbar>
-
+        layout="@layout/app_toolbar" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -37,28 +23,154 @@
             style="@style/TextAppearance.AppCompat.Display1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
+            android:layout_marginTop="@dimen/activityPadding_small"
+            android:layout_marginBottom="@dimen/activityPadding_small"
             android:fontFamily="@font/roboto"
             android:gravity="center"
-            android:layout_marginTop="30dp"
-            android:layout_marginBottom="30dp"
-            android:text="Please set backrest device to fowler's position."
+            android:text="Please set the backrest to fowler's position."
             android:textColor="@color/app_blue_color"
-            android:textSize="30sp" />
+            android:textSize="23sp" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_checkup_page_backrest_lift_up_image" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/button"
             style="@style/Widget.AppCompat.Button.Colored"
             android:layout_width="200dp"
-            android:layout_gravity="center"
             android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="@dimen/activityPadding_small"
+            android:fontFamily="@font/roboto"
             android:onClick="goToDiseaseConfirmationActivity"
-            android:text="OK"
-            android:textColor="@android:color/white"
+            android:text="All Set!"
+            android:textColor="@color/colorWhite"
             app:cornerRadius="20dp" />
 
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="5dp"
+            android:layout_marginTop="@dimen/activityPadding_small"
+            android:layerType="software"
+            android:src="@drawable/ic_dotted_blue_line" />
+
+        <TextView
+            style="@style/TextAppearance.AppCompat.Display1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activityPadding_small"
+            android:layout_marginBottom="@dimen/activityPadding_small"
+            android:fontFamily="@font/roboto"
+            android:gravity="center"
+            android:text="Decline Time:"
+            android:textColor="@color/app_blue_color"
+            android:textSize="23sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="160dp"
+            android:background="@drawable/rectanglebox3">
+
+            <TextView
+                android:id="@+id/tvTime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto"
+                android:text="12 : 13 AM"
+                android:textColor="@color/app_blue_color"
+                android:textSize="40sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/tvTime2"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tvTime"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/roboto"
+                android:text="hh         mm"
+                android:textColor="@color/app_blue_color"
+                android:textSize="20sp" />
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:layout_alignParentRight="true"
+                android:layout_margin="@dimen/activityPadding_small"
+                android:src="@drawable/ic_outline_info_24" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/activityPadding"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rectanglebox3"
+                android:gravity="center"
+                android:orientation="horizontal"
+                android:padding="@dimen/activityPadding_small">
+
+                <ImageView
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:src="@drawable/rounded_rectangle_blue" />
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtName"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/activityPadding"
+                    android:fontFamily="@font/roboto"
+                    android:padding="4dp"
+                    android:text="Sleep Apnea Mode"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="22sp" />
+
+            </LinearLayout>
+
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_gravity="center_vertical|end"
+                android:layout_marginLeft="25dp"
+                android:src="@drawable/ic_outline_settings_24" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true">
+
+
+            <com.google.android.material.button.MaterialButton
+                style="@style/Widget.AppCompat.Button.Colored"
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:text="Confirm"
+                android:textColor="@android:color/white"
+                app:cornerRadius="20dp" />
+
+            <com.google.android.material.button.MaterialButton
+                android:layout_width="0dp"
+                android:layout_height="60dp"
+                android:layout_alignParentBottom="true"
+                android:layout_margin="10dp"
+                android:layout_weight="1"
+                android:backgroundTint="#555"
+                android:text="Cancel"
+                android:textColor="@android:color/white"
+                app:cornerRadius="20dp" />
+        </LinearLayout>
     </LinearLayout>
 
 

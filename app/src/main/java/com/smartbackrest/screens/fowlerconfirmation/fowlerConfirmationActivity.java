@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.TextView;
 
 import com.smartbackrest.screens.bluetoothdeviceselection.BLEDeviceSelectionActivity;
 import com.smartbackrest.screens.diseasconfirmation.DiseasConfirmationActivity;
@@ -19,6 +20,9 @@ public class fowlerConfirmationActivity extends AppCompatActivity {
 
         openBluetoothDeviceIfNotPaired();
 
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Check Up");
     }
 
     public void goToDiseaseConfirmationActivity(View v) {
