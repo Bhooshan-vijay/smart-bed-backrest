@@ -19,6 +19,7 @@
             android:layout_gravity="center"
             android:fontFamily="@font/roboto_medium"
             android:text="@string/login"
+            android:textColor="@color/colorWhite"
             android:textSize="20sp" />
     </androidx.appcompat.widget.Toolbar>
 

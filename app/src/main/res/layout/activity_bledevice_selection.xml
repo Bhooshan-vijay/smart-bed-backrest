@@ -5,14 +5,19 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="#ffffff"
-    android:padding="@dimen/activityPadding"
     tools:context=".screens.bluetoothdeviceselection.BLEDeviceSelectionActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
     <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@id/toolbar"
         android:id="@+id/txtHeadline"
         style="@style/TextAppearance.AppCompat.Headline"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_margin="@dimen/activityPadding"
         android:fontFamily="@font/roboto"
         android:padding="10dp"
         android:text="@string/selectbedrest"
@@ -27,9 +32,10 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/txtHeadline"
+        android:layout_margin="@dimen/activityPadding"
         android:layout_marginTop="20dp"
         android:background="@drawable/rectanglebox3"
-        android:layout_below="@id/txtHeadline"
         android:orientation="vertical">
 
         <androidx.appcompat.widget.AppCompatTextView

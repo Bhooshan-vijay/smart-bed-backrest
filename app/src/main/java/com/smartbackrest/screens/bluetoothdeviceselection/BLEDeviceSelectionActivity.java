@@ -87,6 +87,10 @@ public class BLEDeviceSelectionActivity extends AppCompatActivity {
         if (getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE).getBoolean("demo_mode", false)) {
             returnActivityResult();
         }
+
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Choose Device");
     }
 
     @Override
