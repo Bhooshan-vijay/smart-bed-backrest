@@ -5,6 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
+    android:padding="@dimen/activityPadding"
     tools:context=".screens.success.SuccessActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
@@ -14,8 +15,7 @@
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_help_outline_black_24dp"
         android:padding="10dp"
-        android:id="@+id/imgHelp"
-        />
+        android:id="@+id/imgHelp" />
 
     <com.airbnb.lottie.LottieAnimationView
         android:id="@+id/animation_view"
@@ -44,7 +44,8 @@
         android:layout_marginBottom="620dp"
         android:gravity="left"
         android:text="Demo operation speed HI: Realtime VERY LOW"
-        android:textColor="#000"
+        android:textColor="@color/app_blue_color"
+        android:fontFamily="@font/roboto"
         android:textSize="30sp" />
 
 
