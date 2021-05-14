@@ -6,6 +6,7 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.CompoundButton;
+import android.widget.TextView;
 
 import com.google.android.material.chip.Chip;
 import com.smartbackrest.ApplicationData;
@@ -24,6 +25,11 @@ public class MedicalProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_medical_profile);
+
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Create Profile");
+
 
         findViewById(R.id.layoutHelp).setOnClickListener(new View.OnClickListener() {
             @Override
