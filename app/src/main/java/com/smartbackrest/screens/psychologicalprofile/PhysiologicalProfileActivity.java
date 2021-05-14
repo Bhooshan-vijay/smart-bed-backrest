@@ -39,6 +39,9 @@ public class PhysiologicalProfileActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_physiological_profile);
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Physiological Profile");
 
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
 

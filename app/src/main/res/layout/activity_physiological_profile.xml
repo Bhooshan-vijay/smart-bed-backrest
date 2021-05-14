@@ -7,90 +7,93 @@
     android:background="@color/colorWhite"
     tools:context=".screens.psychologicalprofile.PhysiologicalProfileActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
     <RelativeLayout
+
         android:id="@+id/layoutHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:orientation="horizontal"
-        android:layout_margin="10dp"
-        android:padding="5dp"
         android:layout_alignParentEnd="true"
-        android:background="@drawable/rounded_rectangle"
-        android:layout_alignParentRight="true">
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="150dp"
+        android:layout_marginTop="8dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal"
+        android:padding="5dp">
 
         <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHelp"
             android:layout_width="30dp"
             android:layout_height="30dp"
-            android:id="@+id/imgHelp"
-            android:background="@drawable/ic_help_outline_black_24dp"
-            />
+            android:background="@drawable/ic_help_outline_black_24dp" />
 
         <androidx.appcompat.widget.AppCompatTextView
-            android:layout_toEndOf="@+id/imgHelp"
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="HELP"
             android:layout_centerVertical="true"
-            android:textSize="20sp"
-            android:layout_toRightOf="@+id/imgHelp" />
+            android:layout_toEndOf="@+id/imgHelp"
+            android:layout_toRightOf="@+id/imgHelp"
+            android:fontFamily="@font/roboto"
+            android:text="Help"
+            android:textSize="20sp" />
 
     </RelativeLayout>
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_alignParentBottom="true">
+        android:layout_alignParentBottom="true"
+        android:gravity="center"
+        android:orientation="vertical">
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:backgroundTint="#555"
             android:onClick="onYesClick"
             android:text="Yes"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:cornerRadius="20dp" />
 
         <com.google.android.material.button.MaterialButton
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:backgroundTint="#555"
             android:onClick="onNoClick"
             android:text="No"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:cornerRadius="20dp" />
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnNotSure"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
             android:layout_margin="10dp"
-            android:layout_weight="1"
             android:onClick="onNotSureClick"
             android:text="Not sure"
+            android:fontFamily="@font/roboto"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             android:textSize="20sp"
             app:cornerRadius="20dp" />
     </LinearLayout>
 
-    <androidx.appcompat.widget.AppCompatTextView
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:textColor="#000000"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:padding="10dp"
-        android:text="Physiological                 Profile"
-        android:textSize="30sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -105,9 +108,10 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:textColor="#555"
+            android:padding="@dimen/activityPadding"
             android:text="I have surgeries related to stomach"
-            android:textSize="45sp" />
+            android:textColor="@color/app_blue_color"
+            android:textSize="30sp" />
     </LinearLayout>
 
 </RelativeLayout>
