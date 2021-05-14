@@ -57,7 +57,7 @@
                     android:textSize="18dp" />
 
                 <com.google.android.material.chip.ChipGroup
-                    android:id="@+id/mealTypeGroup"
+                    android:id="@+id/cGroupSoup"
                     style="@style/Widget.MaterialComponents.Chip.Choice"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
