@@ -49,6 +49,9 @@ public class TimerActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer);
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Confirm Time");
+
         context = this;
         btnSkip = findViewById(R.id.btnSkip);
         btnQuit = findViewById(R.id.btnQuit);
