@@ -5,20 +5,12 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorWhite"
-    android:padding="10dp"
     tools:context=".screens.timerset.TimerSetActivity">
 
 
-    <androidx.appcompat.widget.AppCompatTextView
-        style="@style/TextAppearance.AppCompat.Headline"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_centerHorizontal="true"
-        android:text="Dial Decline Time"
-        android:textColor="@color/colorBlack"
-        android:textSize="25dp"
-        android:textStyle="bold"
-        android:layout_margin="10dp"/>
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
 
     <RelativeLayout
         android:id="@+id/layoutHelp"
@@ -27,7 +19,8 @@
         android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:background="@drawable/rounded_rectangle"
+        android:layout_marginRight="50dp"
+        android:layout_marginTop="5dp"
         android:orientation="horizontal"
         android:padding="10dp">
 
@@ -50,25 +43,27 @@
         android:text="Add at least three hours from the time you finished the meal"
         android:gravity="center"
         android:textColor="#ffffff"
+        android:fontFamily="@font/roboto"
         android:textSize="15dp"
-        android:layout_margin="10dp"
-        android:padding="10dp"/>
-
+        android:layout_margin="@dimen/activityPadding"
+        android:padding="20dp"/>
 
     <TimePicker
         android:id="@+id/timePicker"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:layout_margin="10dp"/>
+        android:layout_margin="@dimen/activityPadding"/>
 
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/continu"
         style="@style/Widget.AppCompat.Button.Colored"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="60dp"
+        android:layout_margin="@dimen/activityPadding"
         android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
         android:onClick="goToTimerActivity"
         android:text="Continue"
         android:textColor="@android:color/white"

@@ -9,6 +9,7 @@ import android.os.Bundle;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.LinearLayout;
+import android.widget.TextView;
 import android.widget.TimePicker;
 
 import com.smartbackrest.R;
@@ -24,6 +25,9 @@ public class TimerSetActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_timer_set);
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Dial Decline Time");
+
 
         ViewGroup v = findViewById(R.id.timePicker);
 
