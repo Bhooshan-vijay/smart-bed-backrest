@@ -7,84 +7,111 @@
     android:background="@color/colorWhite"
     tools:context=".screens.profilecreation.ProfileCreationActivity">
 
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
+    <RelativeLayout
+        android:id="@+id/layoutHelp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="4dp"
+        android:layout_marginEnd="50dp"
+        android:layout_marginRight="50dp"
+        android:orientation="horizontal"
+        android:padding="10dp">
+
+        <androidx.appcompat.widget.AppCompatImageView
+            android:id="@+id/imgHelp"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:background="@drawable/ic_help_outline_black_24dp" />
+
+    </RelativeLayout>
+
+
     <RelativeLayout
         android:id="@+id/layout_createUser"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:padding="10dp"
+        android:layout_below="@id/toolbar"
+        android:padding="@dimen/activityPadding"
         android:visibility="gone">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtHeadline"
-            style="@style/TextAppearance.AppCompat.Headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:layout_margin="10dp"
-            android:text="Create Profile"
-            android:textColor="@color/colorBlack"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <RelativeLayout
-            android:id="@+id/layoutHelp"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/rounded_rectangle"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imgHelp"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_help_outline_black_24dp" />
-
-        </RelativeLayout>
 
 
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_below="@id/txtHeadline"
             android:orientation="vertical">
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Enter First Name"
-                android:textColorHint="#000">
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtFName"
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:layout_weight="1"
+                    android:text="Name :"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25sp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_outline_info_24" />
+            </LinearLayout>
 
-            <com.google.android.material.textfield.TextInputLayout
-                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtFName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:hint="Enter your first name .."
+                android:paddingLeft="@dimen/activityPadding_small"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/hintColor"
+                android:textSize="20sp" />
+
+            <androidx.appcompat.widget.AppCompatEditText
+                android:id="@+id/edtLName"
+                android:layout_width="match_parent"
+                android:layout_height="60dp"
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:background="@drawable/rectanglebox3"
+                android:hint="Enter your last name.."
+                android:paddingLeft="@dimen/activityPadding_small"
+                android:textColor="@color/colorBlack"
+                android:textColorHint="@color/hintColor"
+                android:textSize="20sp" />
+
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="10dp"
-                android:hint="Enter Last Name"
-                android:textColorHint="#000">
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:gravity="center"
+                android:orientation="horizontal">
 
-                <com.google.android.material.textfield.TextInputEditText
-                    android:id="@+id/edtLName"
-                    android:layout_width="match_parent"
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:id="@+id/txtSelectAge"
+                    android:layout_width="0dp"
                     android:layout_height="wrap_content"
-                    android:textColor="#000"
-                    android:textSize="20sp" />
+                    android:layout_weight="1"
+                    android:text="Age group:"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25sp" />
 
-            </com.google.android.material.textfield.TextInputLayout>
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_outline_info_24" />
+            </LinearLayout>
 
             <RelativeLayout
                 android:layout_width="match_parent"
@@ -120,21 +147,13 @@
                     android:layout_height="wrap_content"
                     android:orientation="vertical">
 
-                    <androidx.appcompat.widget.AppCompatTextView
-                        android:id="@+id/txtSelectAge"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_margin="20dp"
-                        android:text="Select Age"
-                        android:textColor="#000"
-                        android:textSize="20sp" />
 
                     <com.shawnlin.numberpicker.NumberPicker
                         android:id="@+id/number_picker"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:layout_margin="10dp"
+                        android:layout_marginTop="10dp"
                         android:visibility="gone"
                         app:np_dividerColor="@color/colorPrimary"
                         app:np_max="90"
@@ -147,22 +166,34 @@
                     <Spinner
                         android:id="@+id/spinner"
                         android:layout_width="match_parent"
-                        android:layout_height="wrap_content"
-                        android:layout_marginStart="20dp"
-                        android:layout_marginEnd="20dp"
-                        android:background="@android:drawable/btn_dropdown"
+                        android:layout_height="70dp"
+                        android:layout_marginTop="10dp"
+                        android:background="@drawable/rectanglebox3"
                         android:dropDownWidth="fill_parent" />
 
                 </LinearLayout>
             </RelativeLayout>
 
-            <androidx.appcompat.widget.AppCompatTextView
-                android:layout_width="wrap_content"
+            <LinearLayout
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:layout_margin="20dp"
-                android:text="Select Gender"
-                android:textColor="#000"
-                android:textSize="20sp" />
+                android:layout_marginTop="@dimen/activityPadding_small"
+                android:gravity="center"
+                android:orientation="horizontal">
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Gender :"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="25sp" />
+
+                <androidx.appcompat.widget.AppCompatImageView
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:src="@drawable/ic_outline_info_24" />
+            </LinearLayout>
 
             <LinearLayout
                 android:layout_width="match_parent"
@@ -176,20 +207,25 @@
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipMale"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
-                        android:layout_marginLeft="20dp"
-                        android:layout_marginRight="10dp"
-                        android:checked="true"
+                        android:layout_height="55dp"
                         android:text="Male" />
 
                     <com.google.android.material.chip.Chip
                         android:id="@+id/chipFemale"
-                        style="@style/Widget.MaterialComponents.Chip.Choice"
+                        style="@style/ChipsTheme"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="55dp"
+                        android:layout_marginLeft="30dp"
                         android:text="Female" />
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipNotToSay"
+                        style="@style/ChipsTheme"
+                        android:layout_width="wrap_content"
+                        android:layout_height="55dp"
+                        android:text="Prefer not say" />
 
                 </com.google.android.material.chip.ChipGroup>
             </LinearLayout>
@@ -199,11 +235,14 @@
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btnCreate"
             style="@style/Widget.AppCompat.Button.Colored"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_width="200dp"
+            android:layout_height="60dp"
             android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:fontFamily="@font/roboto"
             android:onClick="goForMedicalProfile"
             android:text="Continue"
+            android:textAllCaps="false"
             android:textColor="@android:color/white"
             app:cornerRadius="20dp" />
 
@@ -213,43 +252,14 @@
         android:id="@+id/layout_userDetails"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
+        android:layout_below="@id/toolbar"
         android:padding="10dp"
         android:visibility="gone">
 
-        <androidx.appcompat.widget.AppCompatTextView
-            android:id="@+id/txtHeadingUserDetails"
-            style="@style/TextAppearance.AppCompat.Headline"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_centerHorizontal="true"
-            android:padding="10dp"
-            android:text="Profile"
-            android:textColor="#000"
-            android:textSize="25dp"
-            android:textStyle="bold" />
-
-        <RelativeLayout
-            android:id="@+id/layoutHelp_userDetails"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_alignParentTop="true"
-            android:layout_alignParentEnd="true"
-            android:layout_alignParentRight="true"
-            android:background="@drawable/rounded_rectangle"
-            android:orientation="horizontal"
-            android:padding="10dp">
-
-            <androidx.appcompat.widget.AppCompatImageView
-                android:id="@+id/imgHelp_userDetails"
-                android:layout_width="30dp"
-                android:layout_height="30dp"
-                android:background="@drawable/ic_help_outline_black_24dp" />
-        </RelativeLayout>
 
         <ScrollView
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_below="@+id/txtHeadingUserDetails">
+            android:layout_height="wrap_content">
 
             <LinearLayout
                 android:id="@+id/layout_text"
@@ -271,8 +281,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="First Name : "
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -283,6 +294,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="First Name"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -302,8 +314,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="Last Name : "
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -314,6 +327,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="First Name"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -333,8 +347,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="Age : "
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -345,6 +360,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="First Name"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -364,8 +380,9 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="Gender : "
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -376,6 +393,7 @@
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
                         android:layout_weight="1"
+                        android:fontFamily="@font/roboto"
                         android:text="First Name"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -395,8 +413,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Disease : "
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <LinearLayout
@@ -409,6 +428,7 @@
                             style="@style/TextAppearance.AppCompat.Headline"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
+                            android:fontFamily="@font/roboto"
                             android:text="Diabetes"
                             android:textColor="#000"
                             android:textSize="20sp" />
@@ -419,6 +439,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto"
                             android:text="Parkinsons"
                             android:textColor="#000"
                             android:textSize="20sp" />
@@ -429,6 +450,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto"
                             android:text="Scleroderma"
                             android:textColor="#000"
                             android:textSize="20sp" />
@@ -439,6 +461,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_marginTop="10dp"
+                            android:fontFamily="@font/roboto"
                             android:text="Multiple Sclerosis"
                             android:textColor="#000"
                             android:textSize="20sp" />
@@ -461,8 +484,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Digestive Medication :"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -472,6 +496,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="YES"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -490,8 +515,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Anxiety Issues :"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -501,6 +527,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="YES"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -519,8 +546,9 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="Stomach Surgeries :"
-                        android:textColor="@color/colorPrimary"
+                        android:textColor="@color/app_blue_color"
                         android:textSize="20sp" />
 
                     <androidx.appcompat.widget.AppCompatTextView
@@ -530,6 +558,7 @@
                         android:layout_height="wrap_content"
                         android:layout_marginStart="20dp"
                         android:layout_marginLeft="20dp"
+                        android:fontFamily="@font/roboto"
                         android:text="YES"
                         android:textColor="#000"
                         android:textSize="20sp" />
@@ -545,21 +574,24 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_alignParentBottom="true"
+            android:gravity="center"
             android:orientation="vertical">
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnEdit"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
                 android:text="Edit Details"
+                android:fontFamily="@font/roboto"
                 android:textColor="@android:color/white"
                 app:cornerRadius="20dp" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btnContinue"
                 style="@style/Widget.AppCompat.Button.Colored"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_width="200dp"
+                android:layout_height="60dp"
+                android:fontFamily="@font/roboto"
                 android:text="Continue"
                 android:textColor="@android:color/white"
                 app:cornerRadius="20dp" />
@@ -573,6 +605,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerInParent="true"
-        android:visibility="visible"/>
+        android:visibility="visible" />
 
 </RelativeLayout>

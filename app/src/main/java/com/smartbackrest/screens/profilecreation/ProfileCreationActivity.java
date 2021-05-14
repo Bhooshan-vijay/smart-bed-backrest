@@ -65,6 +65,9 @@ public class ProfileCreationActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_profile_creation);
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Create Profile");
 
         context = this;
 
@@ -209,10 +212,16 @@ public class ProfileCreationActivity extends AppCompatActivity {
         if (user != null) {
             layout_createUser.setVisibility(View.GONE);
             layout_userDetails.setVisibility(View.VISIBLE);
+
+            TextView title = findViewById(R.id.screen_title);
+            title.setText("Profile");
         } else {
             layout_createUser.setVisibility(View.VISIBLE);
             layout_userDetails.setVisibility(View.GONE);
             progressBar.setVisibility(View.GONE);
+            TextView title = findViewById(R.id.screen_title);
+            title.setText("Create Profile");
+
             return;
         }
 
