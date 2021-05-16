@@ -26,6 +26,7 @@ import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -91,6 +92,10 @@ public class BLEDeviceSelectionActivity extends AppCompatActivity {
         //Set title
         TextView title = findViewById(R.id.screen_title);
         title.setText("Choose Device");
+
+        //Back Icon click
+        ImageView backIcon = findViewById(R.id.iv_backIcon);
+        backIcon.setOnClickListener(view -> finish());
     }
 
     @Override

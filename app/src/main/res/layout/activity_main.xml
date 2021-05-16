@@ -22,10 +22,10 @@
 
         <androidx.appcompat.widget.AppCompatTextView
             android:id="@+id/font"
-            style="@style/TextAppearance.AppCompat.Display1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="20dp"
+            android:textSize="35sp"
             android:fontFamily="@font/roboto"
             android:text="@string/smart_bedrest"
             android:textColor="@color/app_blue_color" />

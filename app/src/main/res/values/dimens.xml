@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <dimen name="splashImageDimen">290dp</dimen>
+    <dimen name="splashImageDimen">250dp</dimen>
     <dimen name="activityPadding">16dp</dimen>
     <dimen name="activityPadding_small">10dp</dimen>
+    <dimen name="activity_text_size">20sp</dimen>
+    <dimen name="bg_marginleft">-100dp</dimen>
+    <dimen name="bg_marginright">-110dp</dimen>
 </resources>
