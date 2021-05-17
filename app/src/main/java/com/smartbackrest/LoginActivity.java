@@ -5,6 +5,8 @@ import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.ImageView;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.widget.ViewAnimator;
 
@@ -49,6 +51,15 @@ public class LoginActivity extends AppCompatActivity {
         numberEditText = findViewById(R.id.numberEditText);
         otpEditText = findViewById(R.id.otpEditText);
         mAuth = FirebaseAuth.getInstance();
+
+
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Login");
+
+        //Back Icon click
+        ImageView backIcon = findViewById(R.id.iv_backIcon);
+        backIcon.setOnClickListener(view -> finish());
     }
 
     public void verifyNumber(View view) {
