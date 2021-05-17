@@ -9,6 +9,8 @@ import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.ImageView;
+import android.widget.TextView;
 
 import com.smartbackrest.ApplicationData;
 import com.smartbackrest.screens.bluetoothdeviceselection.BLEDeviceSelectionActivity;
@@ -31,6 +33,10 @@ public class FeatureSelectionActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_feature_selection);
+
+        //Set title
+        TextView title = findViewById(R.id.screen_title);
+        title.setText("Home");
 
 
         btnDemoMode = findViewById(R.id.btnDemoMode);
