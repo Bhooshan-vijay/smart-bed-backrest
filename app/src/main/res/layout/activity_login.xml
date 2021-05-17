@@ -112,7 +112,7 @@
                         android:layout_marginTop="@dimen/activityPadding"
                         android:onClick="verifyNumber"
                         android:padding="@dimen/activityPadding"
-                        android:text="verify number"
+                        android:text="Verify number"
                         android:textAllCaps="false"
                         android:textColor="@color/colorWhite"
                         app:cornerRadius="20dp" />
@@ -184,7 +184,7 @@
                         android:onClick="signInWithOtp"
                         android:padding="@dimen/activityPadding"
                         app:cornerRadius="20dp"
-                        android:text="verify otp"
+                        android:text="Verify otp"
                         android:textColor="@color/colorWhite" />
 
                 </RelativeLayout>
