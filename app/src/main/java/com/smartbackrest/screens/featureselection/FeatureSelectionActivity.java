@@ -96,13 +96,13 @@ public class FeatureSelectionActivity extends AppCompatActivity {
             if (user != null) {
                 ApplicationData.getInstance().setUser(user);
             }
-            if (!isBluetoothDevicePaired()) {
-                startActivityForResult(new Intent(this, BLEDeviceSelectionActivity.class), 1);
-            } else {
+//            if (!isBluetoothDevicePaired()) {
+//                startActivityForResult(new Intent(this, BLEDeviceSelectionActivity.class), 1);
+//            } else {
                 Intent intent = new Intent(this, ProfileCreationActivity.class);
                 //   intent.putExtra("isUserCreated","true");
                 startActivity(intent);
-            }
+//            }
 //            } else {
 //                Intent intent = new Intent(this, ProfileCreationActivity.class);
 //                intent.putExtra("isUserCreated","false");

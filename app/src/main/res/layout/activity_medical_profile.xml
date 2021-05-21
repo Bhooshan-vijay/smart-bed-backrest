@@ -10,6 +10,25 @@
     <include
         android:id="@+id/toolbar"
         layout="@layout/app_toolbar" />
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/bg_marginleft"
+        android:layout_marginRight="@dimen/bg_marginright"
+        android:background="@drawable/ic_circles_background"
+        android:scaleType="matrix" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_marginBottom="100dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/bg_marginleft"
+        android:layout_marginRight="@dimen/bg_marginright"
+        android:background="@drawable/ic_circles_background"
+        android:scaleType="matrix" />
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -27,7 +46,7 @@
             android:gravity="center"
             android:text="Do you suffer from:"
             android:textColor="@color/app_blue_color"
-            android:textSize="23sp" />
+            android:textSize="@dimen/activity_text_size" />
 
         <com.google.android.material.chip.ChipGroup
             android:id="@+id/mealTypeGroup"
@@ -110,32 +129,33 @@
 
     </RelativeLayout>
 
+
     <LinearLayout
+        android:id="@+id/buttonHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.AppCompat.Button.Colored"
+            style="@style/ButtonTheme"
             android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_margin="3dp"
+            android:layout_height="@dimen/activity_button_height"
+            android:onClick="finishActivity"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:onClick="goToMedicationProfile"
-            android:text="Next"
-            android:textColor="@android:color/white"
-            app:cornerRadius="20dp" />
+            android:text="Cancel" />
 
         <com.google.android.material.button.MaterialButton
+            style="@style/ButtonTheme"
+            android:onClick="goToMedicationProfile"
             android:layout_width="0dp"
-            android:layout_height="60dp"
-            android:layout_alignParentBottom="true"
-            android:layout_margin="3dp"
+            android:layout_height="@dimen/activity_button_height"
+            android:layout_margin="10dp"
             android:layout_weight="1"
-            android:backgroundTint="#555"
-            android:text="Cancel"
-            android:textColor="@android:color/white"
-            app:cornerRadius="20dp" />
+            android:text="Next" />
+
+
     </LinearLayout>
+
 
 </RelativeLayout>

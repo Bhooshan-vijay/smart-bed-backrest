@@ -11,6 +11,26 @@
         android:id="@+id/toolbar"
         layout="@layout/app_toolbar" />
 
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/bg_marginleft"
+        android:layout_marginRight="@dimen/bg_marginright"
+        android:background="@drawable/ic_rectangles_background"
+        android:scaleType="matrix" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="270dp"
+        android:paddingBottom="150dp"
+        android:layout_centerInParent="true"
+        android:layout_marginLeft="@dimen/bg_marginleft"
+        android:layout_marginRight="@dimen/bg_marginright"
+        android:background="@drawable/ic_circles_background"
+        android:scaleType="matrix" />
+
+
     <RelativeLayout
         android:visibility="gone"
         android:id="@+id/layoutHelp"
@@ -43,42 +63,33 @@
     </RelativeLayout>
 
     <LinearLayout
+        android:id="@+id/buttonHolder"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true">
 
         <com.google.android.material.button.MaterialButton
+            style="@style/ButtonTheme"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/activity_button_height"
+            android:onClick="onNoClick"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorWhite"
-            android:elevation="20dp"
-            android:fontFamily="@font/roboto"
-            android:onClick="onYesClick"
-            android:text="Yes"
-            android:textAllCaps="false"
-            android:textColor="@color/app_purple"
-            android:textSize="25sp"
-            app:cornerRadius="20dp"
-            app:elevation="20dp" />
+            android:text="Cancel" />
 
         <com.google.android.material.button.MaterialButton
-            style="@style/Widget.AppCompat.Button.Colored"
+            style="@style/ButtonTheme"
+            android:onClick="onYesClick"
             android:layout_width="0dp"
-            android:layout_height="60dp"
+            android:layout_height="@dimen/activity_button_height"
             android:layout_margin="10dp"
             android:layout_weight="1"
-            android:backgroundTint="@color/colorWhite"
-            android:fontFamily="@font/roboto"
-            android:onClick="onNoClick"
-            android:text="No"
-            android:textAllCaps="false"
-            android:textColor="@color/app_purple"
-            android:textSize="25sp"
-            app:cornerRadius="20dp"
-            app:elevation="20dp" />
+            android:text="Finish" />
+
+
     </LinearLayout>
+
+
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -96,7 +107,7 @@
             android:fontFamily="@font/roboto"
             android:text="Are you on antacid medication ?"
             android:textColor="@color/app_blue_color"
-            android:textSize="23sp" />
+            android:textSize="@dimen/activity_text_size" />
 
 
         <LinearLayout
@@ -115,7 +126,7 @@
                 android:gravity="center"
                 android:text="Do you have :"
                 android:textColor="@color/app_blue_color"
-                android:textSize="23sp" />
+                android:textSize="@dimen/activity_text_size" />
 
             <com.google.android.material.chip.ChipGroup
                 android:id="@+id/mealTypeGroup"
@@ -142,7 +153,7 @@
                 android:gravity="center"
                 android:text="Have you had:"
                 android:textColor="@color/app_blue_color"
-                android:textSize="23sp" />
+                android:textSize="@dimen/activity_text_size" />
 
             <com.google.android.material.chip.ChipGroup
                 android:layout_width="match_parent"

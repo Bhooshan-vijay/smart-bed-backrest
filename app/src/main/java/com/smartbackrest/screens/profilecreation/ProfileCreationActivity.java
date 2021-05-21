@@ -385,6 +385,10 @@ public class ProfileCreationActivity extends AppCompatActivity {
         }
     }
 
+    public void finishActivity(View view) {
+        finish();
+    }
+
 
     private void verifyGenderAndGoToNext(String fName, String lName, int age) {
         if (chipMale.isChecked() || chipFemale.isChecked()) {

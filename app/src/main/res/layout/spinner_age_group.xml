@@ -9,8 +9,9 @@
     android:ellipsize="marquee"
     android:textColor="#000"
     android:fontFamily="@font/roboto"
-    android:background="@drawable/rectanglebox"
+    android:background="@color/colorWhite"
     android:textSize="15sp"
-    android:padding="10dp"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
     android:gravity="center"
     android:textAlignment="center"/>

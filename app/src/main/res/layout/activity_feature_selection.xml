@@ -12,9 +12,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_marginLeft="-50dp"
+        android:layout_marginLeft="-40dp"
         android:layout_marginTop="-300dp"
-        android:layout_marginRight="-50dp"
+        android:layout_marginRight="-40dp"
         android:background="@drawable/ic_home_screen_background"
         android:scaleType="matrix" />
 
@@ -51,16 +51,27 @@
                 android:text="Title"
                 android:textColor="@color/colorWhite"
                 android:textSize="20sp" />
+
             <ImageView
                 android:id="@+id/iv_bluetooth"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/iv_menuIcon"
                 android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_menuIcon"
                 android:paddingTop="@dimen/activityPadding"
                 android:paddingRight="@dimen/activityPadding"
                 android:paddingBottom="@dimen/activityPadding"
                 android:src="@drawable/ic_sharp_bluetooth_24" />
+
+            <androidx.appcompat.widget.AppCompatImageView
+                android:id="@+id/imgHelp"
+                android:layout_width="24dp"
+                android:layout_height="24dp"
+                android:layout_marginRight="@dimen/activityPadding"
+                android:layout_centerVertical="true"
+                android:layout_toLeftOf="@id/iv_bluetooth"
+                android:background="@drawable/ic_help_outline_black_24dp" />
+
 
             <ImageView
                 android:id="@+id/iv_menuIcon"
@@ -122,8 +133,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_timer_mode_icon" />
 
                     <LinearLayout
@@ -140,7 +151,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="TIMER MODE"
                             android:textColor="@color/app_blue_color"
-                            android:textSize="25sp" />
+                            android:textSize="20sp" />
 
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -150,7 +161,7 @@
                             android:fontFamily="@font/roboto"
                             android:text="Enter meal details"
                             android:textColor="@color/app_gray"
-                            android:textSize="20dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -165,6 +176,7 @@
                 app:contentPaddingLeft="@dimen/activityPadding_small">
 
                 <LinearLayout
+                    android:id="@+id/llQuickModeMeal"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:layout_margin="10dp"
@@ -172,8 +184,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_meal_mode_quick_icon" />
 
                     <LinearLayout
@@ -190,7 +202,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="MEAL MODE : QUICK"
                             android:textColor="@color/app_blue_color"
-                            android:textSize="25sp" />
+                            android:textSize="20sp" />
 
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -200,7 +212,7 @@
                             android:fontFamily="@font/roboto"
                             android:text="Enter meal details"
                             android:textColor="@color/app_gray"
-                            android:textSize="20dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -222,8 +234,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_meal_mode_detailed_image" />
 
                     <LinearLayout
@@ -240,7 +252,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="MEAL MODE : DETAILED"
                             android:textColor="@color/app_blue_color"
-                            android:textSize="25sp" />
+                            android:textSize="20sp" />
 
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -250,7 +262,7 @@
                             android:fontFamily="@font/roboto"
                             android:text="Enter meal details"
                             android:textColor="@color/app_gray"
-                            android:textSize="20dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>
@@ -272,8 +284,8 @@
                     android:orientation="horizontal">
 
                     <ImageView
-                        android:layout_width="50dp"
-                        android:layout_height="50dp"
+                        android:layout_width="40dp"
+                        android:layout_height="40dp"
                         android:src="@drawable/ic_meal_mode_expert_icon" />
 
                     <LinearLayout
@@ -290,7 +302,7 @@
                             android:fontFamily="@font/roboto_medium"
                             android:text="MEAL MODE : EXPERT"
                             android:textColor="@color/app_blue_color"
-                            android:textSize="25sp" />
+                            android:textSize="20sp" />
 
 
                         <androidx.appcompat.widget.AppCompatTextView
@@ -300,7 +312,7 @@
                             android:fontFamily="@font/roboto"
                             android:text="Enter meal details"
                             android:textColor="@color/app_gray"
-                            android:textSize="20dp" />
+                            android:textSize="15sp" />
                     </LinearLayout>
                 </LinearLayout>
             </androidx.cardview.widget.CardView>

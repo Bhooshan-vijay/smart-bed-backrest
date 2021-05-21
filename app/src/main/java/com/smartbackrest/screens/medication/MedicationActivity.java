@@ -43,7 +43,8 @@ public class MedicationActivity extends AppCompatActivity {
     }
 
     public void onNoClick(View view) {
-        ApplicationData.getInstance().getUser().setOnDigestiveMedication(false);
-        startActivity(new Intent(this, PsychologicalProfileActivity.class));
+        finish();
+//        ApplicationData.getInstance().getUser().setOnDigestiveMedication(false);
+//        startActivity(new Intent(this, PsychologicalProfileActivity.class));
     }
 }

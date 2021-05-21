@@ -75,6 +75,9 @@ public class MedicalProfileActivity extends AppCompatActivity {
         });
     }
 
+    public void finishActivity(View view) {
+        finish();
+    }
     public void goToMedicationProfile(View view) {
         ApplicationData.getInstance().getUser()
                 .setHasAsthama(hasAsthama)
