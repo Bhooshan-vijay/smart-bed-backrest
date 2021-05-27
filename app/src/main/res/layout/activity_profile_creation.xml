@@ -15,10 +15,9 @@
         android:id="@+id/layoutHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/image_margin_top"
         android:layout_marginEnd="50dp"
         android:layout_marginRight="50dp"
         android:orientation="horizontal"
@@ -32,13 +31,12 @@
 
     </RelativeLayout>
 
-
     <RelativeLayout
         android:id="@+id/layout_createUser"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:layout_below="@id/toolbar"
-        android:visibility="visible">
+        android:visibility="gone">
 
         <ImageView
             android:layout_width="match_parent"
@@ -172,25 +170,25 @@
                         app:np_value="3" />
 
                     <LinearLayout
-                        android:paddingLeft="@dimen/activityPadding_small"
-                        android:paddingRight="@dimen/activityPadding_small"
-                        android:layout_marginTop="@dimen/activityPadding_small"
                         android:layout_width="match_parent"
                         android:layout_height="50dp"
+                        android:layout_marginTop="@dimen/activityPadding_small"
                         android:background="@drawable/rectanglebox3"
-                        android:orientation="horizontal">
+                        android:orientation="horizontal"
+                        android:paddingLeft="@dimen/activityPadding_small"
+                        android:paddingRight="@dimen/activityPadding_small">
 
                         <Spinner
                             android:id="@+id/spinner"
                             android:layout_width="0dp"
-                            android:layout_weight="1"
                             android:layout_height="50dp"
+                            android:layout_weight="1"
                             android:dropDownWidth="fill_parent" />
 
                         <androidx.appcompat.widget.AppCompatImageView
                             android:layout_width="24dp"
-                            android:layout_gravity="center"
                             android:layout_height="24dp"
+                            android:layout_gravity="center"
                             android:src="@drawable/ic_baseline_arrow_drop_down_24" />
 
                     </LinearLayout>
@@ -265,18 +263,18 @@
                 style="@style/ButtonTheme"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/activity_button_height"
-                android:onClick="finishActivity"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:onClick="finishActivity"
                 android:text="Cancel" />
 
             <com.google.android.material.button.MaterialButton
                 style="@style/ButtonTheme"
-                android:onClick="goForMedicalProfile"
                 android:layout_width="0dp"
                 android:layout_height="@dimen/activity_button_height"
                 android:layout_margin="10dp"
                 android:layout_weight="1"
+                android:onClick="goForMedicalProfile"
                 android:text="Confirm" />
 
 
@@ -635,7 +633,6 @@
         </LinearLayout>
 
     </RelativeLayout>
-
     <ProgressBar
         android:id="@+id/progressBar"
         android:layout_width="wrap_content"

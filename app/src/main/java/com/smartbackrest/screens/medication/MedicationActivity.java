@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
+import android.widget.ImageView;
 import android.widget.TextView;
 
 import com.smartbackrest.ApplicationData;
@@ -23,6 +24,10 @@ public class MedicationActivity extends AppCompatActivity {
         //Set title
         TextView title = findViewById(R.id.screen_title);
         title.setText("Medication Profile");
+
+        //Back Icon click
+        ImageView backIcon = findViewById(R.id.iv_backIcon);
+        backIcon.setOnClickListener(view -> finish());
 
         findViewById(R.id.layoutHelp).setOnClickListener(new View.OnClickListener() {
             @Override

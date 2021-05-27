@@ -25,10 +25,9 @@
         android:id="@+id/layoutHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
         android:layout_alignParentEnd="true"
         android:layout_alignParentRight="true"
-        android:layout_marginTop="4dp"
+        android:layout_marginTop="@dimen/image_margin_top"
         android:layout_marginRight="50dp"
         android:background="@drawable/rounded_rectangle"
         android:orientation="horizontal"
@@ -36,8 +35,8 @@
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgHelp"
-            android:layout_width="@dimen/activity_help_buttonsize"
-            android:layout_height="@dimen/activity_help_buttonsize"
+            android:layout_width="@dimen/help_button_size"
+            android:layout_height="@dimen/help_button_size"
             android:background="@drawable/ic_help_outline_black_24dp" />
 
     </RelativeLayout>

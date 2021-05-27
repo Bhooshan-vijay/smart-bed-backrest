@@ -11,4 +11,8 @@
     <dimen name="bg_height">300dp</dimen>
     <dimen name="activity_help_buttonsize">25dp</dimen>
     <dimen name="bg_height_triangle">350dp</dimen>
+    <dimen name="help_button_size">24dp</dimen>
+    <dimen name="image_margin_top">8dp</dimen>
+    <dimen name="activity_button_text_size">16sp</dimen>
+
 </resources>

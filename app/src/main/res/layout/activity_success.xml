@@ -9,8 +9,8 @@
     tools:context=".screens.success.SuccessActivity">
 
     <androidx.appcompat.widget.AppCompatImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="@dimen/help_button_size"
+        android:layout_height="@dimen/help_button_size"
         android:layout_alignParentTop="true"
         android:layout_alignParentRight="true"
         android:src="@drawable/ic_help_outline_black_24dp"

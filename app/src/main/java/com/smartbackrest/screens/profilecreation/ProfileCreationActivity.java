@@ -16,6 +16,7 @@ import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.DatePicker;
 import android.widget.EditText;
+import android.widget.ImageView;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
 import android.widget.Spinner;
@@ -68,6 +69,10 @@ public class ProfileCreationActivity extends AppCompatActivity {
         //Set title
         TextView title = findViewById(R.id.screen_title);
         title.setText("Create Profile");
+
+        //Back Icon click
+        ImageView backIcon = findViewById(R.id.iv_backIcon);
+        backIcon.setOnClickListener(view -> finish());
 
         context = this;
 
