@@ -117,9 +117,9 @@ public class TimerActivity extends AppCompatActivity {
             public void onClick(View v) {
                 if (!getSharedPreferences(getString(R.string.app_name), MODE_PRIVATE).getBoolean("demo_mode", false)) {
                     if(wantsEhanceSleep){
-                        send("b");
+                        send("2");
                     }else{
-                        send("a");
+                        send("1");
                     }
 
                     new Handler().postDelayed(new Runnable() {
