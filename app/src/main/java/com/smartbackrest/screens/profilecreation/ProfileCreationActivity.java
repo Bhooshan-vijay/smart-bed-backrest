@@ -317,11 +317,16 @@ public class ProfileCreationActivity extends AppCompatActivity {
 
         Button btnEdit = findViewById(R.id.btnEdit);
         btnEdit.setOnClickListener(v -> {
-            dbManager.clearUsers();
-            db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber())
-                    .delete();
-            layout_createUser.setVisibility(View.VISIBLE);
-            layout_userDetails.setVisibility(View.GONE);
+            try {
+                dbManager.clearUsers();
+                db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber())
+                        .delete();
+                layout_createUser.setVisibility(View.VISIBLE);
+                layout_userDetails.setVisibility(View.GONE);
+            }
+            catch (Exception e){
+                e.printStackTrace();
+            }
         });
 
 
@@ -337,23 +342,28 @@ public class ProfileCreationActivity extends AppCompatActivity {
     }
 
     private void fetchUserFromFirestore() {
-        DocumentReference docRef = db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber());
-        docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
-            @Override
-            public void onComplete(@NonNull Task<DocumentSnapshot> task) {
-                DocumentSnapshot documentSnapshot = task.getResult();
-                User user = documentSnapshot.toObject(User.class);
+        try {
+            DocumentReference docRef = db.collection("Users").document(FirebaseAuth.getInstance().getCurrentUser().getPhoneNumber());
+            docRef.get().addOnCompleteListener(new OnCompleteListener<DocumentSnapshot>() {
+                @Override
+                public void onComplete(@NonNull Task<DocumentSnapshot> task) {
+                    DocumentSnapshot documentSnapshot = task.getResult();
+                    User user = documentSnapshot.toObject(User.class);
 
-                setUserDetails(user);
-            }
-        }).addOnFailureListener(new OnFailureListener() {
-            @Override
-            public void onFailure(@NonNull Exception e) {
-                layout_createUser.setVisibility(View.VISIBLE);
-                layout_userDetails.setVisibility(View.GONE);
-                progressBar.setVisibility(View.GONE);
-            }
-        });
+                    setUserDetails(user);
+                }
+            }).addOnFailureListener(new OnFailureListener() {
+                @Override
+                public void onFailure(@NonNull Exception e) {
+                    layout_createUser.setVisibility(View.VISIBLE);
+                    layout_userDetails.setVisibility(View.GONE);
+                    progressBar.setVisibility(View.GONE);
+                }
+            });
+        }
+        catch (Exception e){
+            e.printStackTrace();
+        }
     }
 
     public void goForMedicalProfile(View view) {

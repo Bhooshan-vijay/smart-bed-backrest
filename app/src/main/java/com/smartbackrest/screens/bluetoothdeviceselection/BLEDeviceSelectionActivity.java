@@ -52,9 +52,11 @@ public class BLEDeviceSelectionActivity extends AppCompatActivity {
 
             String action = intent.getAction();
             if (action != null) {
-                if (BluetoothDevice.ACTION_FOUND.equals(action)) {
+                    if (BluetoothDevice.ACTION_FOUND.equals(action)) {
                     BluetoothDevice device = intent.getParcelableExtra(BluetoothDevice.EXTRA_DEVICE);
-                    mDeviceList.add(device);
+                    //If not added to the list then only add
+                    if(!mDeviceList.contains(device))
+                        mDeviceList.add(device);
                 } else if (action.equals(BluetoothAdapter.ACTION_DISCOVERY_STARTED)) {
                     mDeviceList = new ArrayList<>();
                 } else if (action.equals(BluetoothAdapter.ACTION_DISCOVERY_FINISHED)) {

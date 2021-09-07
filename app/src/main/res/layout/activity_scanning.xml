@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ffffff"
+    tools:context=".screens.bluetoothdeviceselection.BLEDeviceSelectionActivity">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_alignParentBottom="true"
+        android:layout_marginLeft="@dimen/bg_marginleft"
+        android:layout_marginRight="@dimen/bg_marginright"
+        android:scaleType="matrix"
+        android:background="@drawable/ic_rectangles_background"
+        android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/toolbar"
+        layout="@layout/app_toolbar" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@id/toolbar"
+        android:id="@+id/txtHeadline"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/activityPadding"
+        android:layout_marginTop="@dimen/activityPadding"
+        android:textSize="25sp"
+        android:gravity="center"
+        android:fontFamily="@font/roboto"
+        android:padding="10dp"
+        android:text="Scanning"
+        android:textColor="@color/app_blue_color" />
+
+    <androidx.appcompat.widget.AppCompatTextView
+        android:layout_below="@id/txtHeadline"
+        android:id="@+id/txtHeadline2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/activity_text_size"
+        android:gravity="center"
+        android:fontFamily="@font/roboto"
+        android:text="Looking for backrest device."
+        android:textColor="@color/app_gray" />
+
+</RelativeLayout>
