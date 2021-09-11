@@ -220,6 +220,7 @@ public class ProfileCreationActivity extends AppCompatActivity {
 
             TextView title = findViewById(R.id.screen_title);
             title.setText("Profile");
+            progressBar.setVisibility(View.GONE);
         } else {
             layout_createUser.setVisibility(View.VISIBLE);
             layout_userDetails.setVisibility(View.GONE);
@@ -351,6 +352,7 @@ public class ProfileCreationActivity extends AppCompatActivity {
                     User user = documentSnapshot.toObject(User.class);
 
                     setUserDetails(user);
+                    progressBar.setVisibility(View.GONE);
                 }
             }).addOnFailureListener(new OnFailureListener() {
                 @Override
@@ -363,6 +365,7 @@ public class ProfileCreationActivity extends AppCompatActivity {
         }
         catch (Exception e){
             e.printStackTrace();
+            progressBar.setVisibility(View.GONE);
         }
     }
 
