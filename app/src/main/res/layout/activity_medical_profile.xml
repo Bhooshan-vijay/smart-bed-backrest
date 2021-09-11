@@ -53,7 +53,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:padding="@dimen/activityPadding_small"
-            app:singleSelection="true">
+            app:singleSelection="false">
 
             <com.google.android.material.chip.Chip
                 android:id="@+id/chipDiabetes"
