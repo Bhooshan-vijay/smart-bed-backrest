@@ -23,16 +23,15 @@
     <ImageView
         android:layout_width="match_parent"
         android:layout_height="270dp"
-        android:paddingBottom="150dp"
         android:layout_centerInParent="true"
         android:layout_marginLeft="@dimen/bg_marginleft"
         android:layout_marginRight="@dimen/bg_marginright"
         android:background="@drawable/ic_circles_background"
+        android:paddingBottom="150dp"
         android:scaleType="matrix" />
 
 
     <RelativeLayout
-        android:visibility="visible"
         android:id="@+id/layoutHelp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
@@ -41,7 +40,8 @@
         android:layout_marginTop="@dimen/image_margin_top"
         android:background="@drawable/rounded_rectangle"
         android:orientation="horizontal"
-        android:padding="10dp">
+        android:padding="10dp"
+        android:visibility="visible">
 
         <androidx.appcompat.widget.AppCompatImageView
             android:id="@+id/imgHelp"
@@ -52,13 +52,13 @@
         <androidx.appcompat.widget.AppCompatTextView
             style="@style/TextAppearance.AppCompat.Headline"
             android:layout_width="wrap_content"
-            android:visibility="gone"
             android:layout_height="wrap_content"
             android:layout_centerVertical="true"
             android:layout_toEndOf="@+id/imgHelp"
             android:layout_toRightOf="@+id/imgHelp"
             android:text="HELP"
-            android:textSize="20sp" />
+            android:textSize="20sp"
+            android:visibility="gone" />
 
     </RelativeLayout>
 
@@ -72,106 +72,131 @@
             style="@style/ButtonTheme"
             android:layout_width="0dp"
             android:layout_height="@dimen/activity_button_height"
-            android:onClick="onNoClick"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:onClick="onNoClick"
             android:text="Cancel" />
 
         <com.google.android.material.button.MaterialButton
             style="@style/ButtonTheme"
-            android:onClick="onYesClick"
             android:layout_width="0dp"
             android:layout_height="@dimen/activity_button_height"
             android:layout_margin="10dp"
             android:layout_weight="1"
+            android:onClick="onYesClick"
             android:text="Finish" />
 
 
     </LinearLayout>
 
 
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
         android:layout_centerInParent="true"
         android:gravity="center"
-        android:orientation="vertical">
-
-        <androidx.appcompat.widget.AppCompatTextView
-            style="@style/TextAppearance.AppCompat.Display1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:layout_marginBottom="@dimen/activityPadding"
-            android:fontFamily="@font/roboto"
-            android:text="Are you on antacid medication ?"
-            android:textColor="@color/app_blue_color"
-            android:textSize="@dimen/activity_text_size" />
-
-
+        android:layout_height="wrap_content">
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_centerInParent="true"
-            android:layout_marginTop="@dimen/activityPadding"
-            android:gravity="center"
-            android:orientation="vertical"
-            android:padding="@dimen/activityPadding_small">
+            android:orientation="vertical">
 
             <androidx.appcompat.widget.AppCompatTextView
+                style="@style/TextAppearance.AppCompat.Display1"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
+                android:layout_marginBottom="@dimen/activityPadding"
                 android:fontFamily="@font/roboto"
                 android:gravity="center"
-                android:text="Do you have :"
+                android:text="Are you on antacid medication ?"
                 android:textColor="@color/app_blue_color"
                 android:textSize="@dimen/activity_text_size" />
-
             <com.google.android.material.chip.ChipGroup
-                android:id="@+id/mealTypeGroup"
+                android:id="@+id/antacidMedicationGroup"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:padding="@dimen/activityPadding_small"
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chipAnxityissue"
+                    android:id="@+id/antacidYes"
                     style="@style/ChipsTheme"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
-                    android:text="Anxiety Issues" />
+                    android:text="yes" />
+
+                <com.google.android.material.chip.Chip
+                    android:id="@+id/antacidNo"
+                    style="@style/ChipsTheme"
+                    android:layout_width="match_parent"
+                    android:layout_height="55dp"
+                    android:text="No" />
 
             </com.google.android.material.chip.ChipGroup>
 
-
-            <androidx.appcompat.widget.AppCompatTextView
+            <LinearLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:fontFamily="@font/roboto"
+                android:layout_centerInParent="true"
                 android:layout_marginTop="@dimen/activityPadding"
                 android:gravity="center"
-                android:text="Have you had:"
-                android:textColor="@color/app_blue_color"
-                android:textSize="@dimen/activity_text_size" />
+                android:orientation="vertical"
+                android:padding="@dimen/activityPadding_small">
 
-            <com.google.android.material.chip.ChipGroup
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:padding="@dimen/activityPadding_small"
-                app:singleSelection="true">
-
-                <com.google.android.material.chip.Chip
-                    android:id="@+id/stomachSurgery"
-                    style="@style/ChipsTheme"
+                <androidx.appcompat.widget.AppCompatTextView
                     android:layout_width="match_parent"
-                    android:layout_height="55dp"
-                    android:text="Stomach Surgery" />
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Do you have :"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="@dimen/activity_text_size" />
 
-            </com.google.android.material.chip.ChipGroup>
+                <com.google.android.material.chip.ChipGroup
+                    android:id="@+id/mealTypeGroup"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/chipAnxityissue"
+                        style="@style/ChipsTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="Anxiety Issues" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+
+                <androidx.appcompat.widget.AppCompatTextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/activityPadding"
+                    android:fontFamily="@font/roboto"
+                    android:gravity="center"
+                    android:text="Have you had:"
+                    android:textColor="@color/app_blue_color"
+                    android:textSize="@dimen/activity_text_size" />
+
+                <com.google.android.material.chip.ChipGroup
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="@dimen/activityPadding_small"
+                    app:singleSelection="true">
+
+                    <com.google.android.material.chip.Chip
+                        android:id="@+id/stomachSurgery"
+                        style="@style/ChipsTheme"
+                        android:layout_width="match_parent"
+                        android:layout_height="55dp"
+                        android:text="Stomach Surgery" />
+
+                </com.google.android.material.chip.ChipGroup>
+
+            </LinearLayout>
+
 
         </LinearLayout>
+    </ScrollView>
 
-
-    </LinearLayout>
 </RelativeLayout>

@@ -16,6 +16,7 @@ import android.widget.Toast;
 import com.google.android.gms.tasks.OnFailureListener;
 import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.android.material.chip.Chip;
+import com.google.android.material.chip.ChipGroup;
 import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.firestore.FirebaseFirestore;
@@ -68,17 +69,24 @@ public class MedicationActivity extends AppCompatActivity {
             ApplicationData.getInstance().getUser().setHasStomachSurgeries(b);
         });
 
+        ChipGroup antacidMedicationGroup= findViewById(R.id.antacidMedicationGroup);
+        antacidMedicationGroup.setOnCheckedChangeListener((chipGroup, i) -> {
+            if(i==0){
+                ApplicationData.getInstance().getUser().setOnDigestiveMedication(true);
+            } else {
+                ApplicationData.getInstance().getUser().setOnDigestiveMedication(false);
+            }
+        });
+
         firebaseUser = FirebaseAuth.getInstance().getCurrentUser();
     }
 
     public void onYesClick(View view) {
-        ApplicationData.getInstance().getUser().setOnDigestiveMedication(true);
         setUserDataIntoFirestore();
         saveProfile();
     }
 
     public void onNoClick(View view) {
-        ApplicationData.getInstance().getUser().setOnDigestiveMedication(false);
         setUserDataIntoFirestore();
         saveProfile();
 //        finish();
