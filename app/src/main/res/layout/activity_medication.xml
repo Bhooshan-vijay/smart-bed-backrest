@@ -136,7 +136,7 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
-                    android:id="@+id/chipDiabetes"
+                    android:id="@+id/chipAnxityissue"
                     style="@style/ChipsTheme"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
@@ -162,6 +162,7 @@
                 app:singleSelection="true">
 
                 <com.google.android.material.chip.Chip
+                    android:id="@+id/stomachSurgery"
                     style="@style/ChipsTheme"
                     android:layout_width="match_parent"
                     android:layout_height="55dp"
