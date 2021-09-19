@@ -23,6 +23,7 @@ import com.google.firebase.auth.FirebaseUser;
 import com.google.firebase.auth.PhoneAuthCredential;
 import com.google.firebase.auth.PhoneAuthOptions;
 import com.google.firebase.auth.PhoneAuthProvider;
+import com.smartbackrest.screens.featureselection.FeatureSelectionActivity;
 import com.smartbackrest.screens.fowlerconfirmation.fowlerConfirmationActivity;
 
 import java.util.concurrent.TimeUnit;
@@ -132,7 +133,8 @@ public class SignUpActivity extends AppCompatActivity {
 
 
     private void openFowlerConfirmationActivity() {
-        Intent intent = new Intent(getApplicationContext(), fowlerConfirmationActivity.class);
+//        Intent intent = new Intent(getApplicationContext(), fowlerConfirmationActivity.class);
+        Intent intent = new Intent(getApplicationContext(), FeatureSelectionActivity.class);
         startActivity(intent);
         finish();
     }

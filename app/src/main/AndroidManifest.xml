@@ -61,6 +61,9 @@
             android:name=".screens.mealcontent.MealContentActivity"
             android:screenOrientation="portrait" />
         <activity
+            android:name=".SignUpActivity"
+            android:screenOrientation="portrait" />
+        <activity
             android:name=".screens.MainActivity"
             android:screenOrientation="portrait">
             <intent-filter>

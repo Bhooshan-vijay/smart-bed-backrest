@@ -8,6 +8,7 @@ import android.os.Handler;
 
 import com.smartbackrest.LoginActivity;
 import com.smartbackrest.R;
+import com.smartbackrest.SignUpActivity;
 import com.smartbackrest.screens.featureselection.FeatureSelectionActivity;
 import com.smartbackrest.screens.fowlerconfirmation.fowlerConfirmationActivity;
 
@@ -22,7 +23,7 @@ public class MainActivity extends AppCompatActivity {
 
 
         new Handler().postDelayed(() -> {
-            Intent intent = new Intent(getApplicationContext(), FeatureSelectionActivity.class);
+            Intent intent = new Intent(getApplicationContext(), SignUpActivity.class);
             startActivity(intent);
             finish();
         }, SPLASH_DISPLAY_LENGTH);
